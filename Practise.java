@@ -1,28 +1,25 @@
-package com.testing;
+package Demo;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
+import java.io.File;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.Test;
 
-public class Practise {
-  @Test
-  public void f() throws InterruptedException {
-	  WebDriver dr  = new ChromeDriver();
-	  dr.get("https://practicetestautomation.com/practice-test-login/");
-	   WebElement user = dr.findElement(By.id("username"));
-	   user.sendKeys("student");
-	  Thread.sleep(1000); 
-	  
-	  WebElement  js1 = dr.findElement(By.xpath("//a[@href=\'https://practicetestautomation.com/privacy-policy/\']"));
-	  JavascriptExecutor js=(JavascriptExecutor)dr;
-	  js.executeScript("arguments[0].scrollIntoView(true);", js1);
-	   
-	  	   
-	   
-	  
-	  
-  }
+import com.google.common.io.Files;
+
+public class Practise 
+{
+	public static void main(String[] args) 
+	{
+		WebDriver dr  = new ChromeDriver();
+		dr.get("https://demo.guru99.com/test/drag_drop.html");
+		dr.manage().window().fullscreen();
+		
+		File ss= ((TakesScreenshot)dr).getScreenshotAs(OutputType.FILE);
+		//Files.copy(ss, ss)
+		
+		
+	}
 }
