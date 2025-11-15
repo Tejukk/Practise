@@ -1,0 +1,17 @@
+package Demo;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Tutorialspoint {
+	public static void main(String[] args) {
+        WebDriver d = new ChromeDriver();
+        d.get("https://www.tutorialspoint.com/selenium/practice/selenium_automation_practice.php");
+        d.manage().window().maximize();
+        d.findElement(By.id("name")).sendKeys("Tejaswini");
+        d.findElement(By.id("email")).sendKeys("tejukhandbahale03@gmail.com");
+        
+        
+	}
+}
