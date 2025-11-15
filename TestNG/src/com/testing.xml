@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+  <test name="Test">
+    <classes>
+     
+        <class name="com.testing.NewTask"/>
+        <parameter name = "username" value="practice"/>
+        <parameter name = "password" value="SuperSecretPassword!"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
